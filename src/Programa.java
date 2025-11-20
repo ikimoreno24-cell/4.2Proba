@@ -1,5 +1,33 @@
 import java.util.Scanner;
 public class Programa {
+
+    public static String balidatuZenbakia(int zenb) {
+        if (zenb < 100 || zenb > 999) {
+            return "ER1";
+        }
+        return "OK";
+    }
+
+    public static String balidatuSaila(int saila) {
+        if (saila < 10 || saila > 99) {
+            return "ER2";
+        }
+        return "OK";
+    }
+
+    public static String balidatuLana(String lana) {
+        switch (lana) {
+            case "programatzailea":
+                return "2000";
+            case "analista":
+                return "2500";
+            case "diseinatzailea":
+                return "1500";
+            default:
+                return "ER3";
+        }
+    }
+
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
